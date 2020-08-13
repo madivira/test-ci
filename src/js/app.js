@@ -12,9 +12,9 @@ export default function healthy(gamer) {
 };
 //second
 export const gamer = [
+  {name: 'мечник', health: 10},
   {name: 'маг', health: 100},
   {name: 'лучник', health: 80},
-  {name: 'мечник', health: 10},
 ];
 
 export function sortByHealth(arr) {

@@ -13,15 +13,42 @@ test.each([
   expect(healthy({ health: amount })).toBe(expected);
 });
 //second
-test('test array', () => {
-        
+describe("array", () => {
+
+  test("test array", () => {
+    expect(gamer).toEqual([
+      {name: 'мечник', health: 10},
+      {name: 'маг', health: 100},
+      {name: 'лучник', health: 80},
+    ]);
+  })
+
+  test('test array reverse', () => {
     sortByHealth(gamer);
-    
-    const gamerNew = gamer.reverse();
-   
-    expect(gamerNew).toEqual([
+  
+    expect(gamer.reverse()).toEqual([
         {name: 'маг', health: 100},
         {name: 'лучник', health: 80},
         {name: 'мечник', health: 10},
       ]);
+  })
+
+  test('test array health 0', () => {
+    expect(gamer).not.toEqual([
+      {name: 'маг', health: 0},
+      {name: 'лучник', health: 0},
+      {name: 'мечник', health: 0},
+    ]);
+  })
+
+  test('test array health -1', () => {
+    expect(gamer).not.toEqual([
+      {name: 'маг', health: -1},
+      {name: 'лучник', health: -1},
+      {name: 'мечник', health: -1},
+    ]);
+  })
+
 })
+
+
