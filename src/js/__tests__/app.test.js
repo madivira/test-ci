@@ -1,4 +1,4 @@
-import healthy from '../app';
+import healthy, {sortByHealth, gamer} from '../app';
 
 test.each([
   ['healthy+', 100, 'healthy'],
@@ -12,18 +12,9 @@ test.each([
 ])(('testing healthy'), (title, amount, expected) => {
   expect(healthy({ health: amount })).toBe(expected);
 });
-
+//second
 test('test array', () => {
-    const gamer = [
-        {name: 'маг', health: 100},
-        {name: 'лучник', health: 80},
-        {name: 'мечник', health: 10},
-      ];
-    
-    function sortByHealth(arr) {
-        arr.sort((a, b) => a.health - b.health);
-    };
-    
+        
     sortByHealth(gamer);
     
     const gamerNew = gamer.reverse();

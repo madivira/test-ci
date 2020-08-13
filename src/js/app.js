@@ -9,4 +9,14 @@ export default function healthy(gamer) {
     return 'critical';
   }
   return '';
-}
+};
+//second
+export const gamer = [
+  {name: 'маг', health: 100},
+  {name: 'лучник', health: 80},
+  {name: 'мечник', health: 10},
+];
+
+export function sortByHealth(arr) {
+  arr.sort((a, b) => a.health - b.health);
+};
